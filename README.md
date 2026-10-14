@@ -2,8 +2,8 @@
 
 A responsive personal website for a fictional Albert Einstein, built for the CSCI-6655 midterm. In the scenario, Einstein has been brought to the present day and wants a place online for his photo, his published papers and a blog. The site is the first step before a larger online learning platform.
 
-**Live site:** https://YOUR-USERNAME.github.io/einstein-website/
-**Author:** YOUR NAME
+**Live site:** https://github.com/pavi-collab/wedbappmidterm
+**Author:** Pavani Dabbugottu
 
 > The scenario and characters are fictional and exist only for this exam.
 
