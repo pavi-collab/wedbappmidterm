@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Albert Einstein | Theoretical Physicist</title>
+  <meta name="description" content="The personal website of Albert Einstein, with his published papers.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Karla:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap header-grid">
+      <a class="brand" href="#top">Albert Einstein</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+      <span></span><span></span><span></span>
+      </button>
+      <nav id="site-nav" aria-label="Main">
+        <a href="#about">About</a>
+        <a href="#papers">Papers</a>
+        <a href="#ideas">Ideas</a>
+        <a href="#timeline">Timeline</a>
+        <a href="#awards">Awards</a>
+        <a href="#hobbies">Hobbies</a>
+        <a href="#quotes">Quotes</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#blog">Blog</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero wrap">
+      <figure class="portrait">
+        <img src="images/atongue.jpg" alt="Albert Einstein sticking out his tongue" width="600" height="750">
+      </figure>
+      <div class="intro">
+        <h1>Albert Einstein</h1>
+        <p class="lead">Theoretical physicist, curious about everything, and new to the web.</p>
+        <p>Below are the papers I have published. More will be added as I write them.</p>
+        <a class="button" href="#papers">Read the papers</a>
+      </div>
+    </section>
+
+    <section id="about" class="section about wrap" aria-labelledby="about-title">
+      <h2 id="about-title">About me</h2>
+      <p>Born in Ulm, Germany, in 1879, I have spent my life asking simple questions about light, time and space. I received the 1921 Nobel Prize in Physics for explaining the photoelectric effect. I believe curiosity matters more than having every answer, and I am happy to be learning about today's world.</p>
+      <a class="button" href="https://en.wikipedia.org/wiki/Albert_Einstein" target="_blank" rel="noopener">Read more on Wikipedia</a>
+    </section>
+
+    <section id="papers" class="papers wrap" aria-labelledby="papers-title">
+      <h2 id="papers-title">Published papers</h2>
+      <div id="paper-grid" class="paper-grid"></div>
+    </section>
+    <section id="ideas" class="section wrap" aria-labelledby="ideas-title">
+      <h2 id="ideas-title">Key ideas</h2>
+      <div id="ideas-grid" class="card-grid"></div>
+    </section>
+
+    <section id="timeline" class="section wrap" aria-labelledby="timeline-title">
+      <h2 id="timeline-title">Life timeline</h2>
+      <div id="timeline-grid" class="card-grid"></div>
+    </section>
+    
+    <section id="awards" class="section wrap" aria-labelledby="awards-title">
+      <h2 id="awards-title">Awards</h2>
+      <div id="awards-grid" class="card-grid"></div>
+    </section>
+
+    <section id="hobbies" class="section wrap" aria-labelledby="hobbies-title">
+      <h2 id="hobbies-title">Hobbies</h2>
+      <div id="hobbies-grid" class="card-grid"></div>
+    </section>
+    
+    <section id="quotes" class="section wrap" aria-labelledby="quotes-title">
+      <h2 id="quotes-title">Favorite quotes</h2>
+      <div id="quotes-grid" class="quote-grid"></div>
+    </section>
+
+    <section id="gallery" class="section wrap" aria-labelledby="gallery-title">
+      <h2 id="gallery-title">Image collection</h2>
+      <div id="gallery-grid" class="gallery-grid"></div>
+    </section>
+
+    <section id="blog" class="blog wrap" aria-labelledby="blog-title">
+      <h2 id="blog-title">Blog</h2>
+      <div class="blog-grid">
+        <form id="blog-form" class="blog-form">
+          <label for="post-title">Title</label>
+          <input id="post-title" type="text" maxlength="100" required>
+
+          <label for="post-body">Your article</label>
+          <textarea id="post-body" rows="9" required></textarea>
+
+          <label for="post-image">Photo (optional)</label>
+          <input id="post-image" type="file" accept="image/*">
+
+          <button type="submit" class="button">Publish</button>
+          <p id="form-status" class="status" role="status"></p>
+        </form>
+
+        <div id="post-list" class="post-list" aria-live="polite"></div>
+      </div>
+    </section>
+    <section id="contact" class="section wrap" aria-labelledby="contact-title">
+      <h2 id="contact-title">Contact</h2>
+      <div class="blog-grid">
+        <div class="contact-intro">
+          <h3>Say hello</h3>
+          <p>Have a question about my work or an idea for the learning platform? Send me a message.</p>
+        </div>
+        <form id="contact-form" class="blog-form contact-form" name="contact" method="POST" data-netlify="true">
+          <input type="hidden" name="form-name" value="contact">
+          <label for="c-name">Name</label>
+          <input id="c-name" name="name" type="text" required>
+          <label for="c-email">Email</label>
+          <input id="c-email" name="email" type="email" required>
+          <label for="c-message">Message</label>
+          <textarea id="c-message" name="message" rows="6" required></textarea>
+          <button type="submit" class="button">Send</button>
+          <p id="contact-status" class="status" role="status"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>&copy; <span id="year"></span> Albert Einstein</p>
+    </div>
+  </footer>
+
+  <dialog id="confirm-dialog">
+    <form method="dialog">
+      <p>Publish this article?</p>
+      <div class="dialog-actions">
+        <button value="no" class="button button-quiet">No</button>
+        <button value="yes" class="button">Yes</button>
+      </div>
+    </form>
+  </dialog>
+
+  <script src="script.js"></script>
+</body>
+</html>
